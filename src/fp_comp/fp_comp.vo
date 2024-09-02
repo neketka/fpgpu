@@ -1,0 +1,1320 @@
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
+//All rights reserved.
+//File Title: Post-PnR Verilog Simulation Model file
+//Tool Version: V1.9.10.01 (64-bit)
+//Created Time: Sun Sep  1 13:29:29 2024
+
+`timescale 100 ps/100 ps
+module fp_comp(
+	clk,
+	data_a,
+	data_b,
+	rstn,
+	agb,
+	alb
+);
+input clk;
+input [31:0] data_a;
+input [31:0] data_b;
+input rstn;
+output agb;
+output alb;
+wire GND;
+wire VCC;
+wire agb;
+wire alb;
+wire clk;
+wire [31:0] data_a;
+wire [31:0] data_b;
+wire rstn;
+wire \FP_Comp_inst/n202_6 ;
+wire \FP_Comp_inst/n204_6 ;
+wire \FP_Comp_inst/mantissa_A_22_7 ;
+wire \FP_Comp_inst/mantissa_A_22_8 ;
+wire \FP_Comp_inst/mantissa_A_2_7 ;
+wire \FP_Comp_inst/mantissa_B_22_7 ;
+wire \FP_Comp_inst/mantissa_B_22_8 ;
+wire \FP_Comp_inst/mantissa_B_2_7 ;
+wire \FP_Comp_inst/n202_7 ;
+wire \FP_Comp_inst/n202_8 ;
+wire \FP_Comp_inst/n202_9 ;
+wire \FP_Comp_inst/n204_7 ;
+wire \FP_Comp_inst/n204_8 ;
+wire \FP_Comp_inst/n202_11 ;
+wire \FP_Comp_inst/n202_12 ;
+wire \FP_Comp_inst/n202_13 ;
+wire \FP_Comp_inst/n202_14 ;
+wire \FP_Comp_inst/n202_15 ;
+wire \FP_Comp_inst/n202_16 ;
+wire \FP_Comp_inst/n202_17 ;
+wire \FP_Comp_inst/n202_18 ;
+wire \FP_Comp_inst/n202_19 ;
+wire \FP_Comp_inst/n204_10 ;
+wire \FP_Comp_inst/n204_11 ;
+wire \FP_Comp_inst/n202_20 ;
+wire \FP_Comp_inst/n202_21 ;
+wire \FP_Comp_inst/n202_22 ;
+wire \FP_Comp_inst/n202_23 ;
+wire \FP_Comp_inst/n202_24 ;
+wire \FP_Comp_inst/n202_25 ;
+wire \FP_Comp_inst/n202_26 ;
+wire \FP_Comp_inst/n202_27 ;
+wire \FP_Comp_inst/n202_28 ;
+wire \FP_Comp_inst/n202_29 ;
+wire \FP_Comp_inst/n202_30 ;
+wire \FP_Comp_inst/n202_31 ;
+wire \FP_Comp_inst/n202_32 ;
+wire \FP_Comp_inst/n202_33 ;
+wire \FP_Comp_inst/n202_34 ;
+wire \FP_Comp_inst/n202_35 ;
+wire \FP_Comp_inst/n202_36 ;
+wire \FP_Comp_inst/n202_37 ;
+wire \FP_Comp_inst/n202_38 ;
+wire \FP_Comp_inst/n202_39 ;
+wire \FP_Comp_inst/n202_40 ;
+wire \FP_Comp_inst/n202_42 ;
+wire \FP_Comp_inst/n202_43 ;
+wire \FP_Comp_inst/n202_44 ;
+wire \FP_Comp_inst/n202_45 ;
+wire \FP_Comp_inst/n202_46 ;
+wire \FP_Comp_inst/n202_47 ;
+wire \FP_Comp_inst/n202_48 ;
+wire \FP_Comp_inst/n202_49 ;
+wire \FP_Comp_inst/n202_50 ;
+wire \FP_Comp_inst/n202_51 ;
+wire \FP_Comp_inst/n202_52 ;
+wire \FP_Comp_inst/n202_54 ;
+wire \FP_Comp_inst/n204_13 ;
+wire \FP_Comp_inst/n202_56 ;
+wire \FP_Comp_inst/n159_17_SUM ;
+wire \FP_Comp_inst/n159_20 ;
+wire \FP_Comp_inst/n159_18_SUM ;
+wire \FP_Comp_inst/n159_22 ;
+wire \FP_Comp_inst/n159_19_SUM ;
+wire \FP_Comp_inst/n159_24 ;
+wire \FP_Comp_inst/n159_20_SUM ;
+wire \FP_Comp_inst/n159_26 ;
+wire \FP_Comp_inst/n159_21_SUM ;
+wire \FP_Comp_inst/n159_28 ;
+wire \FP_Comp_inst/n159_22_SUM ;
+wire \FP_Comp_inst/n159_30 ;
+wire \FP_Comp_inst/n159_23_SUM ;
+wire \FP_Comp_inst/n159_32 ;
+wire \FP_Comp_inst/n99_1_SUM ;
+wire \FP_Comp_inst/n99_3 ;
+wire \FP_Comp_inst/n100_1_SUM ;
+wire \FP_Comp_inst/n100_3 ;
+wire \FP_Comp_inst/n101_1_SUM ;
+wire \FP_Comp_inst/n101_3 ;
+wire \FP_Comp_inst/n102_1_SUM ;
+wire \FP_Comp_inst/n102_3 ;
+wire \FP_Comp_inst/n103_1_SUM ;
+wire \FP_Comp_inst/n103_3 ;
+wire \FP_Comp_inst/n104_1_SUM ;
+wire \FP_Comp_inst/n104_3 ;
+wire \FP_Comp_inst/n105_1_SUM ;
+wire \FP_Comp_inst/n105_3 ;
+wire \FP_Comp_inst/n106_1_SUM ;
+wire \FP_Comp_inst/n106_3 ;
+wire \FP_Comp_inst/n108_1_SUM ;
+wire \FP_Comp_inst/n108_3 ;
+wire \FP_Comp_inst/n109_1_SUM ;
+wire \FP_Comp_inst/n109_3 ;
+wire \FP_Comp_inst/n110_1_SUM ;
+wire \FP_Comp_inst/n110_3 ;
+wire \FP_Comp_inst/n111_1_SUM ;
+wire \FP_Comp_inst/n111_3 ;
+wire \FP_Comp_inst/n112_1_SUM ;
+wire \FP_Comp_inst/n112_3 ;
+wire \FP_Comp_inst/n113_1_SUM ;
+wire \FP_Comp_inst/n113_3 ;
+wire \FP_Comp_inst/n114_1_SUM ;
+wire \FP_Comp_inst/n114_3 ;
+wire \FP_Comp_inst/n115_1_SUM ;
+wire \FP_Comp_inst/n115_3 ;
+wire \FP_Comp_inst/n116_1_SUM ;
+wire \FP_Comp_inst/n116_3 ;
+wire \FP_Comp_inst/n117_1_SUM ;
+wire \FP_Comp_inst/n117_3 ;
+wire \FP_Comp_inst/n118_1_SUM ;
+wire \FP_Comp_inst/n118_3 ;
+wire \FP_Comp_inst/n119_1_SUM ;
+wire \FP_Comp_inst/n119_3 ;
+wire \FP_Comp_inst/n120_1_SUM ;
+wire \FP_Comp_inst/n120_3 ;
+wire \FP_Comp_inst/n121_1_SUM ;
+wire \FP_Comp_inst/n121_3 ;
+wire \FP_Comp_inst/n122_1_SUM ;
+wire \FP_Comp_inst/n122_3 ;
+wire \FP_Comp_inst/n123_1_SUM ;
+wire \FP_Comp_inst/n123_3 ;
+wire \FP_Comp_inst/n124_1_SUM ;
+wire \FP_Comp_inst/n124_3 ;
+wire \FP_Comp_inst/n125_1_SUM ;
+wire \FP_Comp_inst/n125_3 ;
+wire \FP_Comp_inst/n126_1_SUM ;
+wire \FP_Comp_inst/n126_3 ;
+wire \FP_Comp_inst/n127_1_SUM ;
+wire \FP_Comp_inst/n127_3 ;
+wire \FP_Comp_inst/n128_1_SUM ;
+wire \FP_Comp_inst/n128_3 ;
+wire \FP_Comp_inst/n129_1_SUM ;
+wire \FP_Comp_inst/n129_3 ;
+wire \FP_Comp_inst/n130_1_SUM ;
+wire \FP_Comp_inst/n130_3 ;
+wire \FP_Comp_inst/n72_7 ;
+wire [22:0] \FP_Comp_inst/mantissa_A ;
+wire [22:0] \FP_Comp_inst/mantissa_B ;
+VCC VCC_cZ (
+  .V(VCC)
+);
+GND GND_cZ (
+  .G(GND)
+);
+GSR GSR (
+	.GSRI(VCC)
+);
+LUT3 \FP_Comp_inst/mantissa_A_22_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[22]),
+	.F(\FP_Comp_inst/mantissa_A [22])
+);
+defparam \FP_Comp_inst/mantissa_A_22_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_21_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[21]),
+	.F(\FP_Comp_inst/mantissa_A [21])
+);
+defparam \FP_Comp_inst/mantissa_A_21_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_20_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[20]),
+	.F(\FP_Comp_inst/mantissa_A [20])
+);
+defparam \FP_Comp_inst/mantissa_A_20_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_19_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[19]),
+	.F(\FP_Comp_inst/mantissa_A [19])
+);
+defparam \FP_Comp_inst/mantissa_A_19_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_18_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[18]),
+	.F(\FP_Comp_inst/mantissa_A [18])
+);
+defparam \FP_Comp_inst/mantissa_A_18_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_17_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[17]),
+	.F(\FP_Comp_inst/mantissa_A [17])
+);
+defparam \FP_Comp_inst/mantissa_A_17_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_16_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[16]),
+	.F(\FP_Comp_inst/mantissa_A [16])
+);
+defparam \FP_Comp_inst/mantissa_A_16_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_15_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[15]),
+	.F(\FP_Comp_inst/mantissa_A [15])
+);
+defparam \FP_Comp_inst/mantissa_A_15_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_14_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[14]),
+	.F(\FP_Comp_inst/mantissa_A [14])
+);
+defparam \FP_Comp_inst/mantissa_A_14_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_13_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[13]),
+	.F(\FP_Comp_inst/mantissa_A [13])
+);
+defparam \FP_Comp_inst/mantissa_A_13_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_12_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[12]),
+	.F(\FP_Comp_inst/mantissa_A [12])
+);
+defparam \FP_Comp_inst/mantissa_A_12_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_11_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[11]),
+	.F(\FP_Comp_inst/mantissa_A [11])
+);
+defparam \FP_Comp_inst/mantissa_A_11_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_10_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[10]),
+	.F(\FP_Comp_inst/mantissa_A [10])
+);
+defparam \FP_Comp_inst/mantissa_A_10_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_9_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[9]),
+	.F(\FP_Comp_inst/mantissa_A [9])
+);
+defparam \FP_Comp_inst/mantissa_A_9_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_8_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[8]),
+	.F(\FP_Comp_inst/mantissa_A [8])
+);
+defparam \FP_Comp_inst/mantissa_A_8_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_7_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[7]),
+	.F(\FP_Comp_inst/mantissa_A [7])
+);
+defparam \FP_Comp_inst/mantissa_A_7_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_6_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[6]),
+	.F(\FP_Comp_inst/mantissa_A [6])
+);
+defparam \FP_Comp_inst/mantissa_A_6_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_5_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[5]),
+	.F(\FP_Comp_inst/mantissa_A [5])
+);
+defparam \FP_Comp_inst/mantissa_A_5_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_4_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[4]),
+	.F(\FP_Comp_inst/mantissa_A [4])
+);
+defparam \FP_Comp_inst/mantissa_A_4_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_3_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[3]),
+	.F(\FP_Comp_inst/mantissa_A [3])
+);
+defparam \FP_Comp_inst/mantissa_A_3_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_0_s2  (
+	.I0(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I2(data_a[0]),
+	.F(\FP_Comp_inst/mantissa_A [0])
+);
+defparam \FP_Comp_inst/mantissa_A_0_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_22_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[22]),
+	.F(\FP_Comp_inst/mantissa_B [22])
+);
+defparam \FP_Comp_inst/mantissa_B_22_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_21_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[21]),
+	.F(\FP_Comp_inst/mantissa_B [21])
+);
+defparam \FP_Comp_inst/mantissa_B_21_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_20_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[20]),
+	.F(\FP_Comp_inst/mantissa_B [20])
+);
+defparam \FP_Comp_inst/mantissa_B_20_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_19_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[19]),
+	.F(\FP_Comp_inst/mantissa_B [19])
+);
+defparam \FP_Comp_inst/mantissa_B_19_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_18_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[18]),
+	.F(\FP_Comp_inst/mantissa_B [18])
+);
+defparam \FP_Comp_inst/mantissa_B_18_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_17_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[17]),
+	.F(\FP_Comp_inst/mantissa_B [17])
+);
+defparam \FP_Comp_inst/mantissa_B_17_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_16_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[16]),
+	.F(\FP_Comp_inst/mantissa_B [16])
+);
+defparam \FP_Comp_inst/mantissa_B_16_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_15_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[15]),
+	.F(\FP_Comp_inst/mantissa_B [15])
+);
+defparam \FP_Comp_inst/mantissa_B_15_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_14_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[14]),
+	.F(\FP_Comp_inst/mantissa_B [14])
+);
+defparam \FP_Comp_inst/mantissa_B_14_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_13_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[13]),
+	.F(\FP_Comp_inst/mantissa_B [13])
+);
+defparam \FP_Comp_inst/mantissa_B_13_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_12_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[12]),
+	.F(\FP_Comp_inst/mantissa_B [12])
+);
+defparam \FP_Comp_inst/mantissa_B_12_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_11_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[11]),
+	.F(\FP_Comp_inst/mantissa_B [11])
+);
+defparam \FP_Comp_inst/mantissa_B_11_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_10_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[10]),
+	.F(\FP_Comp_inst/mantissa_B [10])
+);
+defparam \FP_Comp_inst/mantissa_B_10_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_9_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[9]),
+	.F(\FP_Comp_inst/mantissa_B [9])
+);
+defparam \FP_Comp_inst/mantissa_B_9_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_8_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[8]),
+	.F(\FP_Comp_inst/mantissa_B [8])
+);
+defparam \FP_Comp_inst/mantissa_B_8_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_7_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[7]),
+	.F(\FP_Comp_inst/mantissa_B [7])
+);
+defparam \FP_Comp_inst/mantissa_B_7_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_6_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[6]),
+	.F(\FP_Comp_inst/mantissa_B [6])
+);
+defparam \FP_Comp_inst/mantissa_B_6_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_5_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[5]),
+	.F(\FP_Comp_inst/mantissa_B [5])
+);
+defparam \FP_Comp_inst/mantissa_B_5_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_4_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[4]),
+	.F(\FP_Comp_inst/mantissa_B [4])
+);
+defparam \FP_Comp_inst/mantissa_B_4_s2 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_3_s2  (
+	.I0(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I2(data_b[3]),
+	.F(\FP_Comp_inst/mantissa_B [3])
+);
+defparam \FP_Comp_inst/mantissa_B_3_s2 .INIT=8'h70;
+LUT4 \FP_Comp_inst/n202_s2  (
+	.I0(\FP_Comp_inst/n202_7 ),
+	.I1(\FP_Comp_inst/n202_8 ),
+	.I2(\FP_Comp_inst/n202_9 ),
+	.I3(\FP_Comp_inst/n202_54 ),
+	.F(\FP_Comp_inst/n202_6 )
+);
+defparam \FP_Comp_inst/n202_s2 .INIT=16'h10D0;
+LUT4 \FP_Comp_inst/n204_s2  (
+	.I0(\FP_Comp_inst/n204_7 ),
+	.I1(\FP_Comp_inst/n202_8 ),
+	.I2(\FP_Comp_inst/n204_8 ),
+	.I3(\FP_Comp_inst/n204_13 ),
+	.F(\FP_Comp_inst/n204_6 )
+);
+defparam \FP_Comp_inst/n204_s2 .INIT=16'h10D0;
+LUT4 \FP_Comp_inst/mantissa_A_22_s3  (
+	.I0(data_a[27]),
+	.I1(data_a[28]),
+	.I2(data_a[29]),
+	.I3(data_a[30]),
+	.F(\FP_Comp_inst/mantissa_A_22_7 )
+);
+defparam \FP_Comp_inst/mantissa_A_22_s3 .INIT=16'h0001;
+LUT4 \FP_Comp_inst/mantissa_A_22_s4  (
+	.I0(data_a[23]),
+	.I1(data_a[24]),
+	.I2(data_a[25]),
+	.I3(data_a[26]),
+	.F(\FP_Comp_inst/mantissa_A_22_8 )
+);
+defparam \FP_Comp_inst/mantissa_A_22_s4 .INIT=16'h0001;
+LUT2 \FP_Comp_inst/mantissa_A_2_s3  (
+	.I0(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_7 ),
+	.F(\FP_Comp_inst/mantissa_A_2_7 )
+);
+defparam \FP_Comp_inst/mantissa_A_2_s3 .INIT=4'h8;
+LUT4 \FP_Comp_inst/mantissa_B_22_s3  (
+	.I0(data_b[27]),
+	.I1(data_b[28]),
+	.I2(data_b[29]),
+	.I3(data_b[30]),
+	.F(\FP_Comp_inst/mantissa_B_22_7 )
+);
+defparam \FP_Comp_inst/mantissa_B_22_s3 .INIT=16'h0001;
+LUT4 \FP_Comp_inst/mantissa_B_22_s4  (
+	.I0(data_b[23]),
+	.I1(data_b[24]),
+	.I2(data_b[25]),
+	.I3(data_b[26]),
+	.F(\FP_Comp_inst/mantissa_B_22_8 )
+);
+defparam \FP_Comp_inst/mantissa_B_22_s4 .INIT=16'h0001;
+LUT2 \FP_Comp_inst/mantissa_B_2_s3  (
+	.I0(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_7 ),
+	.F(\FP_Comp_inst/mantissa_B_2_7 )
+);
+defparam \FP_Comp_inst/mantissa_B_2_s3 .INIT=4'h8;
+LUT4 \FP_Comp_inst/n202_s3  (
+	.I0(\FP_Comp_inst/n202_11 ),
+	.I1(\FP_Comp_inst/n202_12 ),
+	.I2(data_a[31]),
+	.I3(data_b[31]),
+	.F(\FP_Comp_inst/n202_7 )
+);
+defparam \FP_Comp_inst/n202_s3 .INIT=16'hA0F3;
+LUT4 \FP_Comp_inst/n202_s4  (
+	.I0(\FP_Comp_inst/n202_13 ),
+	.I1(\FP_Comp_inst/n202_14 ),
+	.I2(\FP_Comp_inst/n202_15 ),
+	.I3(\FP_Comp_inst/n202_16 ),
+	.F(\FP_Comp_inst/n202_8 )
+);
+defparam \FP_Comp_inst/n202_s4 .INIT=16'h004F;
+LUT3 \FP_Comp_inst/n202_s5  (
+	.I0(\FP_Comp_inst/n204_13 ),
+	.I1(\FP_Comp_inst/n204_7 ),
+	.I2(\FP_Comp_inst/n202_17 ),
+	.F(\FP_Comp_inst/n202_9 )
+);
+defparam \FP_Comp_inst/n202_s5 .INIT=8'hE0;
+LUT4 \FP_Comp_inst/n204_s3  (
+	.I0(\FP_Comp_inst/n202_11 ),
+	.I1(\FP_Comp_inst/n204_10 ),
+	.I2(data_a[31]),
+	.I3(data_b[31]),
+	.F(\FP_Comp_inst/n204_7 )
+);
+defparam \FP_Comp_inst/n204_s3 .INIT=16'h3F0A;
+LUT3 \FP_Comp_inst/n204_s4  (
+	.I0(\FP_Comp_inst/n202_54 ),
+	.I1(\FP_Comp_inst/n202_7 ),
+	.I2(\FP_Comp_inst/n202_17 ),
+	.F(\FP_Comp_inst/n204_8 )
+);
+defparam \FP_Comp_inst/n204_s4 .INIT=8'hE0;
+LUT4 \FP_Comp_inst/n202_s7  (
+	.I0(data_a[30]),
+	.I1(data_b[30]),
+	.I2(\FP_Comp_inst/n159_32 ),
+	.I3(\FP_Comp_inst/n106_3 ),
+	.F(\FP_Comp_inst/n202_11 )
+);
+defparam \FP_Comp_inst/n202_s7 .INIT=16'hB200;
+LUT4 \FP_Comp_inst/n202_s8  (
+	.I0(\FP_Comp_inst/mantissa_B [22]),
+	.I1(\FP_Comp_inst/mantissa_A [22]),
+	.I2(\FP_Comp_inst/n204_11 ),
+	.I3(\FP_Comp_inst/n202_20 ),
+	.F(\FP_Comp_inst/n202_12 )
+);
+defparam \FP_Comp_inst/n202_s8 .INIT=16'h004F;
+LUT4 \FP_Comp_inst/n202_s9  (
+	.I0(\FP_Comp_inst/n202_21 ),
+	.I1(\FP_Comp_inst/n202_22 ),
+	.I2(\FP_Comp_inst/n202_23 ),
+	.I3(\FP_Comp_inst/n202_24 ),
+	.F(\FP_Comp_inst/n202_13 )
+);
+defparam \FP_Comp_inst/n202_s9 .INIT=16'h4F00;
+LUT4 \FP_Comp_inst/n202_s10  (
+	.I0(\FP_Comp_inst/n202_25 ),
+	.I1(\FP_Comp_inst/n202_26 ),
+	.I2(\FP_Comp_inst/n202_27 ),
+	.I3(\FP_Comp_inst/n202_28 ),
+	.F(\FP_Comp_inst/n202_14 )
+);
+defparam \FP_Comp_inst/n202_s10 .INIT=16'h4000;
+LUT4 \FP_Comp_inst/n202_s11  (
+	.I0(\FP_Comp_inst/n202_29 ),
+	.I1(\FP_Comp_inst/n202_30 ),
+	.I2(\FP_Comp_inst/n202_31 ),
+	.I3(\FP_Comp_inst/n202_32 ),
+	.F(\FP_Comp_inst/n202_15 )
+);
+defparam \FP_Comp_inst/n202_s11 .INIT=16'h4000;
+LUT4 \FP_Comp_inst/n202_s12  (
+	.I0(\FP_Comp_inst/n202_33 ),
+	.I1(\FP_Comp_inst/n202_30 ),
+	.I2(\FP_Comp_inst/n202_34 ),
+	.I3(\FP_Comp_inst/n202_31 ),
+	.F(\FP_Comp_inst/n202_16 )
+);
+defparam \FP_Comp_inst/n202_s12 .INIT=16'h4F00;
+LUT4 \FP_Comp_inst/n202_s13  (
+	.I0(\FP_Comp_inst/n202_35 ),
+	.I1(\FP_Comp_inst/n202_36 ),
+	.I2(\FP_Comp_inst/n202_37 ),
+	.I3(\FP_Comp_inst/n202_38 ),
+	.F(\FP_Comp_inst/n202_17 )
+);
+defparam \FP_Comp_inst/n202_s13 .INIT=16'h0777;
+LUT4 \FP_Comp_inst/n202_s14  (
+	.I0(\FP_Comp_inst/mantissa_A [22]),
+	.I1(\FP_Comp_inst/mantissa_A [21]),
+	.I2(\FP_Comp_inst/mantissa_B [22]),
+	.I3(\FP_Comp_inst/mantissa_B [21]),
+	.F(\FP_Comp_inst/n202_18 )
+);
+defparam \FP_Comp_inst/n202_s14 .INIT=16'h8EAF;
+LUT3 \FP_Comp_inst/n202_s15  (
+	.I0(\FP_Comp_inst/n106_3 ),
+	.I1(data_a[31]),
+	.I2(\FP_Comp_inst/n130_3 ),
+	.F(\FP_Comp_inst/n202_19 )
+);
+defparam \FP_Comp_inst/n202_s15 .INIT=8'h40;
+LUT4 \FP_Comp_inst/n204_s6  (
+	.I0(\FP_Comp_inst/mantissa_B [22]),
+	.I1(\FP_Comp_inst/mantissa_A [22]),
+	.I2(\FP_Comp_inst/n202_19 ),
+	.I3(\FP_Comp_inst/n202_20 ),
+	.F(\FP_Comp_inst/n204_10 )
+);
+defparam \FP_Comp_inst/n204_s6 .INIT=16'h004F;
+LUT3 \FP_Comp_inst/n204_s7  (
+	.I0(data_a[31]),
+	.I1(\FP_Comp_inst/n106_3 ),
+	.I2(\FP_Comp_inst/n130_3 ),
+	.F(\FP_Comp_inst/n204_11 )
+);
+defparam \FP_Comp_inst/n204_s7 .INIT=8'h10;
+LUT4 \FP_Comp_inst/n202_s16  (
+	.I0(data_a[30]),
+	.I1(\FP_Comp_inst/n159_32 ),
+	.I2(data_b[30]),
+	.I3(\FP_Comp_inst/n106_3 ),
+	.F(\FP_Comp_inst/n202_20 )
+);
+defparam \FP_Comp_inst/n202_s16 .INIT=16'h7100;
+LUT4 \FP_Comp_inst/n202_s17  (
+	.I0(\FP_Comp_inst/n202_39 ),
+	.I1(\FP_Comp_inst/n202_40 ),
+	.I2(\FP_Comp_inst/mantissa_A [2]),
+	.I3(\FP_Comp_inst/mantissa_B [2]),
+	.F(\FP_Comp_inst/n202_21 )
+);
+defparam \FP_Comp_inst/n202_s17 .INIT=16'hE0EE;
+LUT4 \FP_Comp_inst/n202_s18  (
+	.I0(\FP_Comp_inst/mantissa_B [2]),
+	.I1(\FP_Comp_inst/mantissa_A [2]),
+	.I2(\FP_Comp_inst/n202_56 ),
+	.I3(\FP_Comp_inst/n202_42 ),
+	.F(\FP_Comp_inst/n202_22 )
+);
+defparam \FP_Comp_inst/n202_s18 .INIT=16'h0B00;
+LUT3 \FP_Comp_inst/n202_s19  (
+	.I0(\FP_Comp_inst/n202_43 ),
+	.I1(\FP_Comp_inst/n202_42 ),
+	.I2(\FP_Comp_inst/n202_44 ),
+	.F(\FP_Comp_inst/n202_23 )
+);
+defparam \FP_Comp_inst/n202_s19 .INIT=8'hB0;
+LUT3 \FP_Comp_inst/n202_s20  (
+	.I0(\FP_Comp_inst/n202_45 ),
+	.I1(\FP_Comp_inst/n202_46 ),
+	.I2(\FP_Comp_inst/n202_47 ),
+	.F(\FP_Comp_inst/n202_24 )
+);
+defparam \FP_Comp_inst/n202_s20 .INIT=8'h80;
+LUT4 \FP_Comp_inst/n202_s21  (
+	.I0(\FP_Comp_inst/n202_48 ),
+	.I1(\FP_Comp_inst/n202_45 ),
+	.I2(\FP_Comp_inst/n202_49 ),
+	.I3(\FP_Comp_inst/n202_46 ),
+	.F(\FP_Comp_inst/n202_25 )
+);
+defparam \FP_Comp_inst/n202_s21 .INIT=16'h4F00;
+LUT4 \FP_Comp_inst/n202_s22  (
+	.I0(\FP_Comp_inst/mantissa_A [15]),
+	.I1(\FP_Comp_inst/mantissa_B [15]),
+	.I2(\FP_Comp_inst/mantissa_A [16]),
+	.I3(\FP_Comp_inst/mantissa_B [16]),
+	.F(\FP_Comp_inst/n202_26 )
+);
+defparam \FP_Comp_inst/n202_s22 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s23  (
+	.I0(\FP_Comp_inst/mantissa_A [13]),
+	.I1(\FP_Comp_inst/mantissa_B [13]),
+	.I2(\FP_Comp_inst/mantissa_A [14]),
+	.I3(\FP_Comp_inst/mantissa_B [14]),
+	.F(\FP_Comp_inst/n202_27 )
+);
+defparam \FP_Comp_inst/n202_s23 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s24  (
+	.I0(\FP_Comp_inst/mantissa_A [11]),
+	.I1(\FP_Comp_inst/mantissa_B [11]),
+	.I2(\FP_Comp_inst/mantissa_A [12]),
+	.I3(\FP_Comp_inst/mantissa_B [12]),
+	.F(\FP_Comp_inst/n202_28 )
+);
+defparam \FP_Comp_inst/n202_s24 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s25  (
+	.I0(\FP_Comp_inst/n202_50 ),
+	.I1(\FP_Comp_inst/n202_27 ),
+	.I2(\FP_Comp_inst/n202_51 ),
+	.I3(\FP_Comp_inst/n202_26 ),
+	.F(\FP_Comp_inst/n202_29 )
+);
+defparam \FP_Comp_inst/n202_s25 .INIT=16'h4F00;
+LUT4 \FP_Comp_inst/n202_s26  (
+	.I0(\FP_Comp_inst/mantissa_B [18]),
+	.I1(\FP_Comp_inst/mantissa_A [18]),
+	.I2(\FP_Comp_inst/mantissa_B [19]),
+	.I3(\FP_Comp_inst/mantissa_A [19]),
+	.F(\FP_Comp_inst/n202_30 )
+);
+defparam \FP_Comp_inst/n202_s26 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s27  (
+	.I0(\FP_Comp_inst/mantissa_B [20]),
+	.I1(\FP_Comp_inst/mantissa_A [20]),
+	.I2(\FP_Comp_inst/mantissa_B [21]),
+	.I3(\FP_Comp_inst/mantissa_A [21]),
+	.F(\FP_Comp_inst/n202_31 )
+);
+defparam \FP_Comp_inst/n202_s27 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s28  (
+	.I0(\FP_Comp_inst/mantissa_B [16]),
+	.I1(\FP_Comp_inst/mantissa_A [16]),
+	.I2(\FP_Comp_inst/mantissa_B [17]),
+	.I3(\FP_Comp_inst/mantissa_A [17]),
+	.F(\FP_Comp_inst/n202_32 )
+);
+defparam \FP_Comp_inst/n202_s28 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s29  (
+	.I0(\FP_Comp_inst/mantissa_A [17]),
+	.I1(\FP_Comp_inst/mantissa_B [17]),
+	.I2(\FP_Comp_inst/mantissa_A [18]),
+	.I3(\FP_Comp_inst/mantissa_B [18]),
+	.F(\FP_Comp_inst/n202_33 )
+);
+defparam \FP_Comp_inst/n202_s29 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s30  (
+	.I0(\FP_Comp_inst/mantissa_A [19]),
+	.I1(\FP_Comp_inst/mantissa_B [19]),
+	.I2(\FP_Comp_inst/mantissa_A [20]),
+	.I3(\FP_Comp_inst/mantissa_B [20]),
+	.F(\FP_Comp_inst/n202_34 )
+);
+defparam \FP_Comp_inst/n202_s30 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s31  (
+	.I0(data_a[23]),
+	.I1(data_a[24]),
+	.I2(data_a[25]),
+	.I3(data_a[26]),
+	.F(\FP_Comp_inst/n202_35 )
+);
+defparam \FP_Comp_inst/n202_s31 .INIT=16'h8000;
+LUT4 \FP_Comp_inst/n202_s32  (
+	.I0(data_a[27]),
+	.I1(data_a[28]),
+	.I2(data_a[29]),
+	.I3(data_a[30]),
+	.F(\FP_Comp_inst/n202_36 )
+);
+defparam \FP_Comp_inst/n202_s32 .INIT=16'h8000;
+LUT4 \FP_Comp_inst/n202_s33  (
+	.I0(data_b[23]),
+	.I1(data_b[24]),
+	.I2(data_b[25]),
+	.I3(data_b[26]),
+	.F(\FP_Comp_inst/n202_37 )
+);
+defparam \FP_Comp_inst/n202_s33 .INIT=16'h8000;
+LUT4 \FP_Comp_inst/n202_s34  (
+	.I0(data_b[27]),
+	.I1(data_b[28]),
+	.I2(data_b[29]),
+	.I3(data_b[30]),
+	.F(\FP_Comp_inst/n202_38 )
+);
+defparam \FP_Comp_inst/n202_s34 .INIT=16'h8000;
+LUT4 \FP_Comp_inst/n202_s35  (
+	.I0(\FP_Comp_inst/n202_52 ),
+	.I1(\FP_Comp_inst/mantissa_B_2_7 ),
+	.I2(\FP_Comp_inst/mantissa_A_2_7 ),
+	.I3(data_a[1]),
+	.F(\FP_Comp_inst/n202_39 )
+);
+defparam \FP_Comp_inst/n202_s35 .INIT=16'h0D00;
+LUT4 \FP_Comp_inst/n202_s36  (
+	.I0(data_b[0]),
+	.I1(data_b[1]),
+	.I2(\FP_Comp_inst/mantissa_B_2_7 ),
+	.I3(\FP_Comp_inst/mantissa_A [0]),
+	.F(\FP_Comp_inst/n202_40 )
+);
+defparam \FP_Comp_inst/n202_s36 .INIT=16'hF100;
+LUT4 \FP_Comp_inst/n202_s38  (
+	.I0(\FP_Comp_inst/mantissa_B [4]),
+	.I1(\FP_Comp_inst/mantissa_A [4]),
+	.I2(\FP_Comp_inst/mantissa_B [5]),
+	.I3(\FP_Comp_inst/mantissa_A [5]),
+	.F(\FP_Comp_inst/n202_42 )
+);
+defparam \FP_Comp_inst/n202_s38 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s39  (
+	.I0(\FP_Comp_inst/mantissa_A [3]),
+	.I1(\FP_Comp_inst/mantissa_B [3]),
+	.I2(\FP_Comp_inst/mantissa_A [4]),
+	.I3(\FP_Comp_inst/mantissa_B [4]),
+	.F(\FP_Comp_inst/n202_43 )
+);
+defparam \FP_Comp_inst/n202_s39 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s40  (
+	.I0(\FP_Comp_inst/mantissa_A [5]),
+	.I1(\FP_Comp_inst/mantissa_B [5]),
+	.I2(\FP_Comp_inst/mantissa_A [6]),
+	.I3(\FP_Comp_inst/mantissa_B [6]),
+	.F(\FP_Comp_inst/n202_44 )
+);
+defparam \FP_Comp_inst/n202_s40 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s41  (
+	.I0(\FP_Comp_inst/mantissa_B [8]),
+	.I1(\FP_Comp_inst/mantissa_A [8]),
+	.I2(\FP_Comp_inst/mantissa_B [9]),
+	.I3(\FP_Comp_inst/mantissa_A [9]),
+	.F(\FP_Comp_inst/n202_45 )
+);
+defparam \FP_Comp_inst/n202_s41 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s42  (
+	.I0(\FP_Comp_inst/mantissa_B [10]),
+	.I1(\FP_Comp_inst/mantissa_A [10]),
+	.I2(\FP_Comp_inst/mantissa_B [11]),
+	.I3(\FP_Comp_inst/mantissa_A [11]),
+	.F(\FP_Comp_inst/n202_46 )
+);
+defparam \FP_Comp_inst/n202_s42 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s43  (
+	.I0(\FP_Comp_inst/mantissa_B [6]),
+	.I1(\FP_Comp_inst/mantissa_A [6]),
+	.I2(\FP_Comp_inst/mantissa_B [7]),
+	.I3(\FP_Comp_inst/mantissa_A [7]),
+	.F(\FP_Comp_inst/n202_47 )
+);
+defparam \FP_Comp_inst/n202_s43 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s44  (
+	.I0(\FP_Comp_inst/mantissa_A [7]),
+	.I1(\FP_Comp_inst/mantissa_B [7]),
+	.I2(\FP_Comp_inst/mantissa_A [8]),
+	.I3(\FP_Comp_inst/mantissa_B [8]),
+	.F(\FP_Comp_inst/n202_48 )
+);
+defparam \FP_Comp_inst/n202_s44 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s45  (
+	.I0(\FP_Comp_inst/mantissa_A [9]),
+	.I1(\FP_Comp_inst/mantissa_B [9]),
+	.I2(\FP_Comp_inst/mantissa_A [10]),
+	.I3(\FP_Comp_inst/mantissa_B [10]),
+	.F(\FP_Comp_inst/n202_49 )
+);
+defparam \FP_Comp_inst/n202_s45 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s46  (
+	.I0(\FP_Comp_inst/mantissa_B [12]),
+	.I1(\FP_Comp_inst/mantissa_A [12]),
+	.I2(\FP_Comp_inst/mantissa_B [13]),
+	.I3(\FP_Comp_inst/mantissa_A [13]),
+	.F(\FP_Comp_inst/n202_50 )
+);
+defparam \FP_Comp_inst/n202_s46 .INIT=16'hB0BB;
+LUT4 \FP_Comp_inst/n202_s47  (
+	.I0(\FP_Comp_inst/mantissa_B [14]),
+	.I1(\FP_Comp_inst/mantissa_A [14]),
+	.I2(\FP_Comp_inst/mantissa_B [15]),
+	.I3(\FP_Comp_inst/mantissa_A [15]),
+	.F(\FP_Comp_inst/n202_51 )
+);
+defparam \FP_Comp_inst/n202_s47 .INIT=16'hB0BB;
+LUT3 \FP_Comp_inst/n202_s48  (
+	.I0(data_b[0]),
+	.I1(data_a[0]),
+	.I2(data_b[1]),
+	.F(\FP_Comp_inst/n202_52 )
+);
+defparam \FP_Comp_inst/n202_s48 .INIT=8'hB0;
+LUT4 \FP_Comp_inst/n202_s49  (
+	.I0(\FP_Comp_inst/n202_18 ),
+	.I1(\FP_Comp_inst/n106_3 ),
+	.I2(data_a[31]),
+	.I3(\FP_Comp_inst/n130_3 ),
+	.F(\FP_Comp_inst/n202_54 )
+);
+defparam \FP_Comp_inst/n202_s49 .INIT=16'h2000;
+LUT4 \FP_Comp_inst/n204_s8  (
+	.I0(\FP_Comp_inst/n202_18 ),
+	.I1(data_a[31]),
+	.I2(\FP_Comp_inst/n106_3 ),
+	.I3(\FP_Comp_inst/n130_3 ),
+	.F(\FP_Comp_inst/n204_13 )
+);
+defparam \FP_Comp_inst/n204_s8 .INIT=16'h0200;
+LUT3 \FP_Comp_inst/mantissa_A_1_s3  (
+	.I0(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I2(data_a[1]),
+	.F(\FP_Comp_inst/mantissa_A [1])
+);
+defparam \FP_Comp_inst/mantissa_A_1_s3 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_A_2_s4  (
+	.I0(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I1(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I2(data_a[2]),
+	.F(\FP_Comp_inst/mantissa_A [2])
+);
+defparam \FP_Comp_inst/mantissa_A_2_s4 .INIT=8'h70;
+LUT4 \FP_Comp_inst/n202_s50  (
+	.I0(\FP_Comp_inst/mantissa_B [3]),
+	.I1(\FP_Comp_inst/mantissa_A_22_7 ),
+	.I2(\FP_Comp_inst/mantissa_A_22_8 ),
+	.I3(data_a[3]),
+	.F(\FP_Comp_inst/n202_56 )
+);
+defparam \FP_Comp_inst/n202_s50 .INIT=16'h1500;
+LUT3 \FP_Comp_inst/mantissa_B_0_s3  (
+	.I0(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I2(data_b[0]),
+	.F(\FP_Comp_inst/mantissa_B [0])
+);
+defparam \FP_Comp_inst/mantissa_B_0_s3 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_1_s3  (
+	.I0(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I2(data_b[1]),
+	.F(\FP_Comp_inst/mantissa_B [1])
+);
+defparam \FP_Comp_inst/mantissa_B_1_s3 .INIT=8'h70;
+LUT3 \FP_Comp_inst/mantissa_B_2_s4  (
+	.I0(\FP_Comp_inst/mantissa_B_22_8 ),
+	.I1(\FP_Comp_inst/mantissa_B_22_7 ),
+	.I2(data_b[2]),
+	.F(\FP_Comp_inst/mantissa_B [2])
+);
+defparam \FP_Comp_inst/mantissa_B_2_s4 .INIT=8'h70;
+DFFC \FP_Comp_inst/agb__reg_s0  (
+	.D(\FP_Comp_inst/n202_6 ),
+	.CLK(clk),
+	.CLEAR(\FP_Comp_inst/n72_7 ),
+	.Q(agb)
+);
+defparam \FP_Comp_inst/agb__reg_s0 .INIT=1'b0;
+DFFC \FP_Comp_inst/alb__reg_s0  (
+	.D(\FP_Comp_inst/n204_6 ),
+	.CLK(clk),
+	.CLEAR(\FP_Comp_inst/n72_7 ),
+	.Q(alb)
+);
+defparam \FP_Comp_inst/alb__reg_s0 .INIT=1'b0;
+ALU \FP_Comp_inst/n159_s16  (
+	.I0(GND),
+	.I1(data_b[23]),
+	.I3(GND),
+	.CIN(data_a[23]),
+	.COUT(\FP_Comp_inst/n159_20 ),
+	.SUM(\FP_Comp_inst/n159_17_SUM )
+);
+defparam \FP_Comp_inst/n159_s16 .ALU_MODE=1;
+ALU \FP_Comp_inst/n159_s17  (
+	.I0(data_a[24]),
+	.I1(data_b[24]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n159_20 ),
+	.COUT(\FP_Comp_inst/n159_22 ),
+	.SUM(\FP_Comp_inst/n159_18_SUM )
+);
+defparam \FP_Comp_inst/n159_s17 .ALU_MODE=1;
+ALU \FP_Comp_inst/n159_s18  (
+	.I0(data_a[25]),
+	.I1(data_b[25]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n159_22 ),
+	.COUT(\FP_Comp_inst/n159_24 ),
+	.SUM(\FP_Comp_inst/n159_19_SUM )
+);
+defparam \FP_Comp_inst/n159_s18 .ALU_MODE=1;
+ALU \FP_Comp_inst/n159_s19  (
+	.I0(data_a[26]),
+	.I1(data_b[26]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n159_24 ),
+	.COUT(\FP_Comp_inst/n159_26 ),
+	.SUM(\FP_Comp_inst/n159_20_SUM )
+);
+defparam \FP_Comp_inst/n159_s19 .ALU_MODE=1;
+ALU \FP_Comp_inst/n159_s20  (
+	.I0(data_a[27]),
+	.I1(data_b[27]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n159_26 ),
+	.COUT(\FP_Comp_inst/n159_28 ),
+	.SUM(\FP_Comp_inst/n159_21_SUM )
+);
+defparam \FP_Comp_inst/n159_s20 .ALU_MODE=1;
+ALU \FP_Comp_inst/n159_s21  (
+	.I0(data_a[28]),
+	.I1(data_b[28]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n159_28 ),
+	.COUT(\FP_Comp_inst/n159_30 ),
+	.SUM(\FP_Comp_inst/n159_22_SUM )
+);
+defparam \FP_Comp_inst/n159_s21 .ALU_MODE=1;
+ALU \FP_Comp_inst/n159_s22  (
+	.I0(data_a[29]),
+	.I1(data_b[29]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n159_30 ),
+	.COUT(\FP_Comp_inst/n159_32 ),
+	.SUM(\FP_Comp_inst/n159_23_SUM )
+);
+defparam \FP_Comp_inst/n159_s22 .ALU_MODE=1;
+ALU \FP_Comp_inst/n99_s0  (
+	.I0(data_a[23]),
+	.I1(data_b[23]),
+	.I3(GND),
+	.CIN(GND),
+	.COUT(\FP_Comp_inst/n99_3 ),
+	.SUM(\FP_Comp_inst/n99_1_SUM )
+);
+defparam \FP_Comp_inst/n99_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n100_s0  (
+	.I0(data_a[24]),
+	.I1(data_b[24]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n99_3 ),
+	.COUT(\FP_Comp_inst/n100_3 ),
+	.SUM(\FP_Comp_inst/n100_1_SUM )
+);
+defparam \FP_Comp_inst/n100_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n101_s0  (
+	.I0(data_a[25]),
+	.I1(data_b[25]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n100_3 ),
+	.COUT(\FP_Comp_inst/n101_3 ),
+	.SUM(\FP_Comp_inst/n101_1_SUM )
+);
+defparam \FP_Comp_inst/n101_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n102_s0  (
+	.I0(data_a[26]),
+	.I1(data_b[26]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n101_3 ),
+	.COUT(\FP_Comp_inst/n102_3 ),
+	.SUM(\FP_Comp_inst/n102_1_SUM )
+);
+defparam \FP_Comp_inst/n102_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n103_s0  (
+	.I0(data_a[27]),
+	.I1(data_b[27]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n102_3 ),
+	.COUT(\FP_Comp_inst/n103_3 ),
+	.SUM(\FP_Comp_inst/n103_1_SUM )
+);
+defparam \FP_Comp_inst/n103_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n104_s0  (
+	.I0(data_a[28]),
+	.I1(data_b[28]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n103_3 ),
+	.COUT(\FP_Comp_inst/n104_3 ),
+	.SUM(\FP_Comp_inst/n104_1_SUM )
+);
+defparam \FP_Comp_inst/n104_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n105_s0  (
+	.I0(data_a[29]),
+	.I1(data_b[29]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n104_3 ),
+	.COUT(\FP_Comp_inst/n105_3 ),
+	.SUM(\FP_Comp_inst/n105_1_SUM )
+);
+defparam \FP_Comp_inst/n105_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n106_s0  (
+	.I0(data_a[30]),
+	.I1(data_b[30]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n105_3 ),
+	.COUT(\FP_Comp_inst/n106_3 ),
+	.SUM(\FP_Comp_inst/n106_1_SUM )
+);
+defparam \FP_Comp_inst/n106_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n108_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [0]),
+	.I1(\FP_Comp_inst/mantissa_B [0]),
+	.I3(GND),
+	.CIN(GND),
+	.COUT(\FP_Comp_inst/n108_3 ),
+	.SUM(\FP_Comp_inst/n108_1_SUM )
+);
+defparam \FP_Comp_inst/n108_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n109_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [1]),
+	.I1(\FP_Comp_inst/mantissa_B [1]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n108_3 ),
+	.COUT(\FP_Comp_inst/n109_3 ),
+	.SUM(\FP_Comp_inst/n109_1_SUM )
+);
+defparam \FP_Comp_inst/n109_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n110_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [2]),
+	.I1(\FP_Comp_inst/mantissa_B [2]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n109_3 ),
+	.COUT(\FP_Comp_inst/n110_3 ),
+	.SUM(\FP_Comp_inst/n110_1_SUM )
+);
+defparam \FP_Comp_inst/n110_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n111_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [3]),
+	.I1(\FP_Comp_inst/mantissa_B [3]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n110_3 ),
+	.COUT(\FP_Comp_inst/n111_3 ),
+	.SUM(\FP_Comp_inst/n111_1_SUM )
+);
+defparam \FP_Comp_inst/n111_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n112_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [4]),
+	.I1(\FP_Comp_inst/mantissa_B [4]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n111_3 ),
+	.COUT(\FP_Comp_inst/n112_3 ),
+	.SUM(\FP_Comp_inst/n112_1_SUM )
+);
+defparam \FP_Comp_inst/n112_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n113_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [5]),
+	.I1(\FP_Comp_inst/mantissa_B [5]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n112_3 ),
+	.COUT(\FP_Comp_inst/n113_3 ),
+	.SUM(\FP_Comp_inst/n113_1_SUM )
+);
+defparam \FP_Comp_inst/n113_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n114_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [6]),
+	.I1(\FP_Comp_inst/mantissa_B [6]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n113_3 ),
+	.COUT(\FP_Comp_inst/n114_3 ),
+	.SUM(\FP_Comp_inst/n114_1_SUM )
+);
+defparam \FP_Comp_inst/n114_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n115_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [7]),
+	.I1(\FP_Comp_inst/mantissa_B [7]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n114_3 ),
+	.COUT(\FP_Comp_inst/n115_3 ),
+	.SUM(\FP_Comp_inst/n115_1_SUM )
+);
+defparam \FP_Comp_inst/n115_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n116_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [8]),
+	.I1(\FP_Comp_inst/mantissa_B [8]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n115_3 ),
+	.COUT(\FP_Comp_inst/n116_3 ),
+	.SUM(\FP_Comp_inst/n116_1_SUM )
+);
+defparam \FP_Comp_inst/n116_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n117_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [9]),
+	.I1(\FP_Comp_inst/mantissa_B [9]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n116_3 ),
+	.COUT(\FP_Comp_inst/n117_3 ),
+	.SUM(\FP_Comp_inst/n117_1_SUM )
+);
+defparam \FP_Comp_inst/n117_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n118_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [10]),
+	.I1(\FP_Comp_inst/mantissa_B [10]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n117_3 ),
+	.COUT(\FP_Comp_inst/n118_3 ),
+	.SUM(\FP_Comp_inst/n118_1_SUM )
+);
+defparam \FP_Comp_inst/n118_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n119_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [11]),
+	.I1(\FP_Comp_inst/mantissa_B [11]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n118_3 ),
+	.COUT(\FP_Comp_inst/n119_3 ),
+	.SUM(\FP_Comp_inst/n119_1_SUM )
+);
+defparam \FP_Comp_inst/n119_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n120_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [12]),
+	.I1(\FP_Comp_inst/mantissa_B [12]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n119_3 ),
+	.COUT(\FP_Comp_inst/n120_3 ),
+	.SUM(\FP_Comp_inst/n120_1_SUM )
+);
+defparam \FP_Comp_inst/n120_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n121_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [13]),
+	.I1(\FP_Comp_inst/mantissa_B [13]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n120_3 ),
+	.COUT(\FP_Comp_inst/n121_3 ),
+	.SUM(\FP_Comp_inst/n121_1_SUM )
+);
+defparam \FP_Comp_inst/n121_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n122_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [14]),
+	.I1(\FP_Comp_inst/mantissa_B [14]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n121_3 ),
+	.COUT(\FP_Comp_inst/n122_3 ),
+	.SUM(\FP_Comp_inst/n122_1_SUM )
+);
+defparam \FP_Comp_inst/n122_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n123_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [15]),
+	.I1(\FP_Comp_inst/mantissa_B [15]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n122_3 ),
+	.COUT(\FP_Comp_inst/n123_3 ),
+	.SUM(\FP_Comp_inst/n123_1_SUM )
+);
+defparam \FP_Comp_inst/n123_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n124_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [16]),
+	.I1(\FP_Comp_inst/mantissa_B [16]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n123_3 ),
+	.COUT(\FP_Comp_inst/n124_3 ),
+	.SUM(\FP_Comp_inst/n124_1_SUM )
+);
+defparam \FP_Comp_inst/n124_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n125_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [17]),
+	.I1(\FP_Comp_inst/mantissa_B [17]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n124_3 ),
+	.COUT(\FP_Comp_inst/n125_3 ),
+	.SUM(\FP_Comp_inst/n125_1_SUM )
+);
+defparam \FP_Comp_inst/n125_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n126_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [18]),
+	.I1(\FP_Comp_inst/mantissa_B [18]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n125_3 ),
+	.COUT(\FP_Comp_inst/n126_3 ),
+	.SUM(\FP_Comp_inst/n126_1_SUM )
+);
+defparam \FP_Comp_inst/n126_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n127_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [19]),
+	.I1(\FP_Comp_inst/mantissa_B [19]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n126_3 ),
+	.COUT(\FP_Comp_inst/n127_3 ),
+	.SUM(\FP_Comp_inst/n127_1_SUM )
+);
+defparam \FP_Comp_inst/n127_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n128_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [20]),
+	.I1(\FP_Comp_inst/mantissa_B [20]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n127_3 ),
+	.COUT(\FP_Comp_inst/n128_3 ),
+	.SUM(\FP_Comp_inst/n128_1_SUM )
+);
+defparam \FP_Comp_inst/n128_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n129_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [21]),
+	.I1(\FP_Comp_inst/mantissa_B [21]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n128_3 ),
+	.COUT(\FP_Comp_inst/n129_3 ),
+	.SUM(\FP_Comp_inst/n129_1_SUM )
+);
+defparam \FP_Comp_inst/n129_s0 .ALU_MODE=3;
+ALU \FP_Comp_inst/n130_s0  (
+	.I0(\FP_Comp_inst/mantissa_A [22]),
+	.I1(\FP_Comp_inst/mantissa_B [22]),
+	.I3(GND),
+	.CIN(\FP_Comp_inst/n129_3 ),
+	.COUT(\FP_Comp_inst/n130_3 ),
+	.SUM(\FP_Comp_inst/n130_1_SUM )
+);
+defparam \FP_Comp_inst/n130_s0 .ALU_MODE=3;
+INV \FP_Comp_inst/n72_s2  (
+	.I(rstn),
+	.O(\FP_Comp_inst/n72_7 )
+);
+endmodule

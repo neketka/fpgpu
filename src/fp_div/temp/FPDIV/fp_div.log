@@ -1,0 +1,40 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v'
+Analyzing included file 'define.vh'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+Back to file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+Analyzing included file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\static_macro_define.v'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+Back to file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v'
+Analyzing included file 'define.vh'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v":1)
+Back to file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v":1)
+Analyzing included file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\static_macro_define.v'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v":2)
+Back to file 'C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v":2)
+Compiling module 'fp_div'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div_wrap.v":5)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+NOTE  (EX0101) : Current top module is "fp_div"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "(PENC32)/(fp_div)" instantiated to "P0" is swept in optimizing("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+WARN  (NL0002) : The module "(PENC8)/(fp_div)" instantiated to "P0" is swept in optimizing("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+WARN  (NL0002) : The module "(PENC8)/(fp_div)" instantiated to "P1" is swept in optimizing("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+WARN  (NL0002) : The module "(PENC8)/(fp_div)" instantiated to "P2" is swept in optimizing("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+WARN  (NL0002) : The module "(PENC8)/(fp_div)" instantiated to "P3" is swept in optimizing("C:\Gowin\Gowin_V1.9.10.01_x64\IDE\ipcore\FPDIV\data\FP_Div.v":981)
+[95%] Generate netlist file "C:\Gowin\Gowin_V1.9.10.01_x64\IDE\bin\Documents\fpgpu\src\fp_div\temp\FPDIV\fp_div.vg" completed
+Generate template file "C:\Gowin\Gowin_V1.9.10.01_x64\IDE\bin\Documents\fpgpu\src\fp_div\temp\FPDIV\fp_div_tmp.v" completed
+[100%] Generate report file "C:\Gowin\Gowin_V1.9.10.01_x64\IDE\bin\Documents\fpgpu\src\fp_div\temp\FPDIV\fp_div_syn.rpt.html" completed
+GowinSynthesis finish

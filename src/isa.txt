@@ -1,0 +1,36 @@
+gpu isa
+
+128 bit/ivec4/vec4 registers
+
+8 - vec4 registers per core, 0000-0111
+4 - vec4 registers per unit, index 1000 is output register/accumulator (D), 1000-1011
+2 - vec4 vertex stream registers per unit, 1100-1101
+1 - vec4 zero, 1110
+1 - vec4 one, 1111
+
+instructions:
+
+first 8 32-bit are read as floats
+
+
+
+arith: 0 | NZP | OOOO | XYZW | AAAA
+mov-shuffle: 10 | XXYYZZWW | DD | AAAA
+stop: 11 | ??????????????
+
+0000 D = A + D
+0001 D = A - D
+0010 D = A * D
+0011 D = 1 / A
+0100 D = frac(A)
+0101 D = round(A)
+0110 D = floor(A)
+0111 D = ceil(A)
+1000 D = sqrt(A)
+1001 D = ln(A)
+1010 D = exp(A)
+1011 D = sin(A)
+1100 D = cos(A)
+1101 D = A cross D
+1110 D = min(D, A)
+1111 D = sum(A) * <1, 1, 1, 1>

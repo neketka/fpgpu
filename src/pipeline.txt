@@ -1,0 +1,174 @@
+Vertex format:
+
+Vec4 pos, Vec4 normal, vec4 uv, vec4 color
+
+Command processor:
+
+- Send vertex ranges to vertex stage
+- Send transformation, normal, color, uv matrices to transform stage
+- Send viewport
+
+Pipeline:
+
+- Vertex + matrix fetch
+
+inputs:
+int index;
+int count;
+
+outputs:
+vec4 pos;
+vec3 norm;
+vec2 uv;
+
+passthrough:
+culling mode,
+z-test mode,
+viewport,
+scissor,
+blend mode,
+light pos, color, enable,
+mat4 positionmat;
+mat3 normalmat;
+mat2x3 uvmat;
+
+
+- Vertex transform (matrix + viewport)
+
+inputs:
+
+mat4 positionmat;
+mat3 normalmat;
+mat2x3 uvmat;
+
+vec4 pos;
+vec3 norm;
+vec2 uv;
+ivec4 viewport,
+
+outputs:
+vec4 transpos;
+vec3 transnorm;
+vec2 transuv;
+
+passthrough:
+z-test mode,
+scissor,
+blend mode,
+light pos, color, enable,
+
+- Face clipping + culling
+
+inputs:
+vec4 transpos;
+vec3 transnorm;
+vec2 transuv;
+culling mode;
+
+outputs:
+vec4 clippedtranspos;
+vec3 clippedtransnorm;
+vec2 clippedtransuv;
+
+passthrough:
+z-test mode,
+scissor,
+blend mode,
+light pos, color, enable,
+
+- Perspective divide
+
+inputs:
+vec4 clippedtranspos;
+vec3 clippedtransnorm;
+vec2 clippedtransuv;
+
+outputs:
+vec4 perspclippedtranspos;
+vec3 perspclippedtransnorm;
+vec2 perspclippedtransuv;
+
+passthrough:
+z-test mode,
+scissor,
+blend mode,
+light pos, color, enable,
+
+- Fragment generation
+
+inputs:
+vec4 perspclippedtranspos;
+vec3 perspclippedtransnorm;
+vec2 perspclippedtransuv;
+ivec2 pixelcoord;
+
+outputs:
+vec4 interpperspclippedtranspos;
+vec3 interpperspclippedtransnorm;
+vec2 interpperspclippedtransuv;
+
+passthrough:
+z-test mode,
+scissor,
+blend mode,
+light pos, color, enable,
+
+- Fetch from image
+
+inputs:
+vec4 interpperspclippedtranspos;
+vec3 interpperspclippedtransnorm;
+vec2 interpperspclippedtransuv;
+
+outputs:
+vec4 interpperspclippedtranspos;
+vec3 interpperspclippedtransnorm;
+vec2 interpperspclippedtransuv;
+vec4 prevcolor + prevdepth;
+
+passthrough:
+z-test mode,
+scissor,
+blend mode,
+light pos, color, enable
+
+- Z-test + scissor
+
+inputs:
+vec4 interpperspclippedtranspos;
+vec3 interpperspclippedtransnorm;
+vec2 interpperspclippedtransuv;
+float prevdepth;
+z-test mode,
+scissor,
+
+outputs:
+vec4 interpperspclippedtranspos;
+vec3 interpperspclippedtransnorm;
+vec2 interpperspclippedtransuv;
+
+passthrough:
+vec3 prevcolor;
+
+blend mode,
+light pos, color, enable
+
+- Shading
+
+inputs:
+ivec2 pixelcoord;
+
+
+outputs:
+vec4 interpperspclippedtranspos;
+vec3 interpperspclippedtransnorm;
+vec2 interpperspclippedtransuv;
+ivec2 pixelcoord;
+
+passthrough:
+
+vec3 prevcolor;
+blend mode,
+
+- Blending + read
+- Write

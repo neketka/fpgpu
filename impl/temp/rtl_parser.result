@@ -1,0 +1,38 @@
+[
+ {
+  "InstFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/mods/alu.sv",
+  "InstLine" : 31,
+  "InstName" : "full_alu",
+  "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/mods/alu.sv",
+  "ModuleLine" : 31,
+  "ModuleName" : "full_alu",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/mods/alu.sv",
+    "InstLine" : 44,
+    "InstName" : "alu_inst",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/mods/alu.sv",
+    "ModuleLine" : 1,
+    "ModuleName" : "alu"
+   }
+  ]
+ },
+ {
+  "InstFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/top.sv",
+  "InstLine" : 3,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/top.sv",
+  "ModuleLine" : 3,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/top.sv",
+    "InstLine" : 23,
+    "InstName" : "alu_inst",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.01_x64/IDE/bin/Documents/fpgpu/src/mods/alu.sv",
+    "ModuleLine" : 1,
+    "ModuleName" : "alu"
+   }
+  ]
+ }
+]
